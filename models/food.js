@@ -1,4 +1,4 @@
-import mongoose from "../db/connection";
+import mongoose from "../db/connection.js";
 
  const Food = new mongoose.Schema({
     index: Number,
