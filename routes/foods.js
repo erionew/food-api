@@ -9,4 +9,11 @@ router.get('/', (req, res) => {
         })
 })
 
+router.get('/:id', (req, res) => {
+    Food.find({_id: req.params.id})
+        .then(food => {
+            res.json(food)
+        })
+})
+
 export default router
