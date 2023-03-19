@@ -30,6 +30,13 @@ router.delete( '/:id', (req, res) => {
     })
 } )
 
+router.put('/:id', (req, res) => {
+    Food.findOneAndUpdate({_id: req.params.id}, req.body)
+        .then(food => {
+            res.json(food);
+        })
+})
+
 
 export default router
 
