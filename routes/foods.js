@@ -16,4 +16,21 @@ router.get('/:id', (req, res) => {
         })
 })
 
+router.post('/', (req, res) => {
+    let newFood = req.body
+    Food.create(newFood)
+        .then(res.json(newFood))
+        consol.log(newFood)
+})
+
+router.delete( '/:id', (req, res) => {
+    Food.findOneAndDelete({_id: req.params.id})
+    .then(food => {
+        res.json(food)
+    })
+} )
+
+
 export default router
+
+
