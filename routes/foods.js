@@ -20,7 +20,7 @@ router.post('/', (req, res) => {
     let newFood = req.body
     Food.create(newFood)
         .then(res.json(newFood))
-        consol.log(newFood)
+        console.log(newFood)
 })
 
 router.delete( '/:id', (req, res) => {
